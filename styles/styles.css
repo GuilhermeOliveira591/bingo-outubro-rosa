@@ -1,0 +1,188 @@
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+    background-color: #fce4ec; /* Rosa claro */
+    color: #c2185b; /* Rosa escuro */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #c2185b; /* Rosa escuro */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ad1457; /* Tom mais escuro */
+}
+
+.sorteio-container .globo {
+    width: 300px;  /* Aumentado de 150px */
+    height: 300px; /* Aumentado de 150px */
+    background-color: #f8bbd0;
+    border-radius: 50%;
+    margin: 20px auto 40px; /* Aumentei a margem inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em; /* Aumentado de 1.2em */
+    font-weight: bold;
+    color: #880e4f;
+    padding: 10px; /* Adicionado para evitar que texto grande vaze */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+.palavra-atual-wrapper {
+    margin: 30px 0;
+}
+
+#palavra-atual {
+    font-size: 4em;
+    font-weight: bold;
+    color: #880e4f; /* Rosa bem escuro */
+    min-height: 80px;
+}
+
+.historico-wrapper {
+    margin-top: 40px;
+}
+
+.historico-wrapper h3 {
+    font-size: 1.6em; /* Reduzido de 1.8em */
+}
+
+.historico {
+    display: flex;
+    justify-content: center;
+    gap: 22px; /* Reduzido de 25px */
+    margin-top: 15px;
+}
+
+.historico span {
+    background-color: #f1f1f1;
+    padding: 14px 22px; /* Reduzido de 15px 25px */
+    border-radius: 8px;
+    font-size: 1.4em;   /* Reduzido de 1.6em */
+    opacity: 0.8;
+    min-width: 135px; /* Reduzido de 150px */
+}
+
+.link-cartela, .link-sorteio {
+    display: block;
+    margin-top: 30px;
+    color: #c2185b;
+}
+
+/* Estilos da Página de Cartela */
+#bingo-card {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+#bingo-card th, #bingo-card td {
+    border: 2px solid #c2185b;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+#bingo-card .free-space {
+    background-color: #f8bbd0;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cartela-impressao {
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    page-break-after: always; /* ESSA É A REGRA MAIS IMPORTANTE! Pula a página após cada cartela. */
+}
+
+.cartela-impressao h4 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #666;
+}
+
+/* Estilos de Impressão */
+@media print {
+    /* Esconde elementos desnecessários da UI */
+    .actions, .link-sorteio, header p, #controles-impressao, .link-cartela {
+        display: none;
+    }
+
+    /* Prepara o corpo da página para a impressão */
+    body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Define o tamanho físico de CADA cartela usando um método mais estável */
+    .cartela-impressao {
+        display: inline-block; /* Trata as cartelas como blocos em uma linha */
+        vertical-align: top; /* Alinha as cartelas pelo topo */
+        width: 8cm;
+        height: 10cm;
+        border: 1px solid #ccc;
+        padding: 0.2cm;
+        margin: 0.5cm; /* Margem para espaçamento */
+        box-sizing: border-box;
+        overflow: hidden;
+        page-break-inside: avoid; /* REGRA MAIS IMPORTANTE: Pede ao navegador para não cortar a cartela no meio de uma página */
+    }
+
+    /* Faz a tabela ocupar 100% do container da cartela */
+    #bingo-card {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+    }
+
+    /* Garante que as bordas fiquem dentro do tamanho da célula */
+    #bingo-card th, #bingo-card td {
+        width: 20%;
+        height: 20%;
+        border: 1px solid #ddd;
+        font-size: 8pt;
+        text-align: center;
+        vertical-align: middle;
+        box-sizing: border-box;
+        word-break: break-word;
+    }
+}
