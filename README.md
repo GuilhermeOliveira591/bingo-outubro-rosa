@@ -1,0 +1,1 @@
+# bingo-outubro-rosa
