@@ -99,12 +99,12 @@ button:hover {
 }
 
 /* Estilos da Página de Cartela */
-#bingo-card {
+.bingo-card {
     border-collapse: collapse;
     margin: 30px auto;
 }
 
-#bingo-card th, #bingo-card td {
+.bingo-card th, .bingo-card td {
     border: 2px solid #c2185b;
     width: 120px;
     height: 120px;
@@ -113,7 +113,7 @@ button:hover {
     padding: 5px;
 }
 
-#bingo-card .free-space {
+.bingo-card .free-space {
     background-color: #f8bbd0;
     font-weight: bold;
 }
@@ -177,7 +177,7 @@ button:hover {
     }
 
     /* Faz a tabela ocupar 100% do container da cartela */
-    #bingo-card {
+    .bingo-card {
         width: 100%;
         height: 100%;
         border-collapse: collapse;
@@ -185,7 +185,7 @@ button:hover {
     }
 
     /* Garante que as bordas fiquem dentro do tamanho da célula */
-    #bingo-card th, #bingo-card td {
+    .bingo-card th, .bingo-card td {
         width: 20%;
         height: 20%;
         border: 1px solid #ddd;

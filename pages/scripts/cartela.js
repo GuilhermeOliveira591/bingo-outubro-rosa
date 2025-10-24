@@ -25,7 +25,7 @@ function criarTabelaCartela() {
     const palavrasEmbaralhadas = embaralhar([...palavras]);
     const palavrasDaCartela = palavrasEmbaralhadas.slice(0, TAMANHO_CARTELA - 1);
     const tabela = document.createElement('table');
-    tabela.id = 'bingo-card';
+    tabela.className = 'bingo-card';
 
     for (let i = 0; i < 5; i++) {
         const row = tabela.insertRow();
@@ -45,14 +45,8 @@ function criarTabelaCartela() {
     return tabela;
 }
 
-// --- LÓGICA SIMPLIFICADA PARA IMPRESSÃO ---
-const gerarImpressaoBtn = document.getElementById('gerar-impressao-btn');
-const containerImpressao = document.getElementById('container-impressao');
-const numeroCartelasInput = document.getElementById('numero-cartelas');
-
-function gerarCartelasEmMassa() {
+function gerarCartelasPalavrasEmMassa(containerImpressao, quantidade) {
     containerImpressao.innerHTML = '';
-    const quantidade = parseInt(numeroCartelasInput.value, 10);
 
     for (let i = 1; i <= quantidade; i++) {
         const cartelaDiv = document.createElement('div');
@@ -67,9 +61,6 @@ function gerarCartelasEmMassa() {
         cartelaDiv.appendChild(tituloCartela);
         cartelaDiv.appendChild(novaTabela);
         
-        // Simplesmente adiciona a cartela direto no container principal
         containerImpressao.appendChild(cartelaDiv);
     }
 }
-    
-gerarImpressaoBtn.addEventListener('click', gerarCartelasEmMassa);
