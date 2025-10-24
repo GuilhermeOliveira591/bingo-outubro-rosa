@@ -40,6 +40,11 @@ button:hover {
     background-color: #ad1457; /* Tom mais escuro */
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .sorteio-container .globo {
     width: 300px;  /* Aumentado de 150px */
     height: 300px; /* Aumentado de 150px */
