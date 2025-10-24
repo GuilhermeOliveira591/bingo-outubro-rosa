@@ -17,7 +17,6 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 800px;
     width: 100%;
 }
 
@@ -45,7 +44,7 @@ button:hover {
     width: 300px;  /* Aumentado de 150px */
     height: 300px; /* Aumentado de 150px */
     background-color: #f8bbd0;
-    border-radius: 50%;
+    border-radius: 60%;
     margin: 20px auto 40px; /* Aumentei a margem inferior */
     display: flex;
     justify-content: center;
