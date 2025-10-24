@@ -24,6 +24,8 @@ const sortearBtn = document.getElementById('sortear-btn');
 const sortearNumeroBtn = document.getElementById('sortear-numero-btn');
 const historicoRecenteEl = document.getElementById('historico-recente');
 const globoVisualEl = document.getElementById('globo-visual');
+const historicoWrapperPalavras = document.getElementById('historico-wrapper-palavras');
+const historicoWrapperNumeros = document.getElementById('historico-wrapper-numeros');
 
 // Variáveis de controle do jogo
 let palavrasDisponiveis = [...palavras];
@@ -37,33 +39,26 @@ function atualizarHistorico() {
     }
 }
 
-// Função principal do sorteio
 function sortearPalavra() {
+    historicoWrapperPalavras.classList.remove('hidden'); 
+    historicoWrapperNumeros.classList.add('hidden');
     sortearNumeroBtn.disabled = true;
 
     if (palavrasDisponiveis.length === 0) {
-        // palavraAtualEl.textContent = "FIM!"; // REMOVIDA
-        globoVisualEl.textContent = "FIM!"; // O globo agora mostra a mensagem final
+        globoVisualEl.textContent = "FIM!"; 
         sortearBtn.disabled = true;
         return;
     }
 
-    // Pega um índice aleatório da lista de palavras disponíveis
     const indiceSorteado = Math.floor(Math.random() * palavrasDisponiveis.length);
 
-    // Remove a palavra da lista de disponíveis e a guarda
     const palavraSorteada = palavrasDisponiveis.splice(indiceSorteado, 1)[0];
 
-    // Atualiza a tela
-    // palavraAtualEl.textContent = palavraSorteada; // REMOVIDA
-    globoVisualEl.textContent = palavraSorteada; // A palavra aparece apenas no globo
+    globoVisualEl.textContent = palavraSorteada; 
 
-    // Adiciona ao início do histórico
     historicoPalavras.unshift(palavraSorteada);
 
-    // Atualiza o visual do histórico
     atualizarHistorico();
 }
 
-// Adiciona o evento de clique ao botão
 sortearBtn.addEventListener('click', sortearPalavra);

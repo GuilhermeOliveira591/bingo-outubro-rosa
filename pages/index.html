@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bingo Outubro Rosa - Sorteio</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
     <div class="container sorteio-container">
         <header>
             <h1>Bingo Outubro Rosa</h1>
         </header>
-        
+
         <main>
             <div id="globo-visual" class="globo">
                 <p>Pronto para começar?</p>
             </div>
 
             <button id="sortear-btn">Sortear Palavra</button>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <button id="sortear-numero-btn">Sortear Número</button>
 
-            <div class="historico-wrapper">
+            <div class="historico-wrapper hidden" id="historico-wrapper-palavras">
                 <h3>Últimas Palavras:</h3>
                 <div id="historico-recente" class="historico">
                     <span>-</span>
@@ -33,11 +35,24 @@
                     <span>-</span>
                 </div>
             </div>
-             <a href="impressao.html" class="link-cartela">Gerar Cartelas</a>
+
+            <div class="historico-wrapper hidden" id="historico-wrapper-numeros">
+                <h3>Últimos Números:</h3>
+                <div id="historico-recente-numeros" class="historico">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </div>
+            <a href="impressao.html" class="link-cartela">Gerar Cartelas</a>
         </main>
     </div>
 
-    <script src="scripts/script.js"></script>
-    <script src="scripts/bingo-numeros.js"></script>
+    <script src="scripts/bingo-palavras-page.js"></script>
+    <script src="scripts/bingo-numeros-page.js"></script>
 </body>
+
 </html>

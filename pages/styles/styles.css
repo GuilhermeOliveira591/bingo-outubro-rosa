@@ -76,6 +76,10 @@ button:disabled {
     margin-top: 40px;
 }
 
+.historico-wrapper.hidden {
+    display: none;
+}
+
 .historico-wrapper h3 {
     font-size: 1.6em; /* Reduzido de 1.8em */
 }
