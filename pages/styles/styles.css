@@ -161,7 +161,6 @@ button:hover {
         height: 10cm;
         border: 1px solid #ccc;
         padding: 0.2cm;
-        margin: 0.5cm; /* Margem para espaçamento */
         box-sizing: border-box;
         overflow: hidden;
         page-break-inside: avoid; /* REGRA MAIS IMPORTANTE: Pede ao navegador para não cortar a cartela no meio de uma página */
