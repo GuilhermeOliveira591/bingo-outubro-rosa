@@ -1,8 +1,3 @@
-// ===============================================
-// LÓGICA DAS CARTELAS DE PALAVRAS
-// ===============================================
-
-// Banco de palavras
 const palavras = [
     "Prevenção", "Cuidado", "Vida", "Amor", "Apoio", "Família", "Esperança",
     "Mamografia", "Consciência", "Saúde", "Outubro Rosa", "Laço Rosa",
@@ -22,13 +17,9 @@ const palavras = [
     "Vínculo", "Prosperar", "Sucesso"
 ];
 
-// --- Constantes renomeadas para clareza ---
 const TAMANHO_CARTELA_PALAVRAS = 25;
 const POSICAO_GRATIS_PALAVRAS = 12;
 
-/**
- * Função para embaralhar um array (genérica, serve para palavras e números)
- */
 function embaralhar(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -37,10 +28,6 @@ function embaralhar(array) {
     return array;
 }
 
-/**
- * Cria uma tabela de cartela para PALAVRAS
- * --- Renomeada de "criarTabelaCartela" ---
- */
 function criarTabelaCartelaPalavras() {
     const palavrasEmbaralhadas = embaralhar([...palavras]);
     const palavrasDaCartela = palavrasEmbaralhadas.slice(0, TAMANHO_CARTELA_PALAVRAS - 1);
@@ -65,9 +52,6 @@ function criarTabelaCartelaPalavras() {
     return tabela;
 }
 
-/**
- * Gera cartelas de PALAVRAS em massa
- */
 function gerarCartelasPalavrasEmMassa(containerImpressao, quantidade) {
     containerImpressao.innerHTML = '';
 
@@ -90,13 +74,6 @@ function gerarCartelasPalavrasEmMassa(containerImpressao, quantidade) {
 }
 
 
-// ===============================================
-// LÓGICA DAS CARTELAS DE NÚMEROS (ADICIONADA)
-// ===============================================
-
-/**
- * Gera um array de números de 'inicio' a 'fim'
- */
 function gerarArrayNumeros(inicio, fim) {
     const numeros = [];
     for (let i = inicio; i <= fim; i++) {
@@ -105,19 +82,14 @@ function gerarArrayNumeros(inicio, fim) {
     return numeros;
 }
 
-// Banco de números para o bingo
 const numeros = gerarArrayNumeros(1, 90);
 
 const TAMANHO_CARTELA_NUMEROS = 25;
-const POSICAO_GRATIS_NUMEROS = 12; // Posição central (índice 12 em um array de 25)
+const POSICAO_GRATIS_NUMEROS = 12; 
 
-/**
- * Cria e retorna um elemento <table> representando uma cartela de bingo de números.
- */
+
 function criarTabelaCartelaNumeros() {
-    // Reutiliza a mesma função 'embaralhar'
     const numerosEmbaralhados = embaralhar([...numeros]);
-    // Pega os primeiros 24 números para a cartela
     const numerosDaCartela = numerosEmbaralhados.slice(0, TAMANHO_CARTELA_NUMEROS - 1);
 
     const tabela = document.createElement('table');
@@ -142,9 +114,7 @@ function criarTabelaCartelaNumeros() {
     return tabela;
 }
 
-/**
- * Gera cartelas de NÚMEROS em massa
- */
+
 function gerarCartelasNumerosEmMassa(containerImpressao, quantidade) {
     containerImpressao.innerHTML = '';
 

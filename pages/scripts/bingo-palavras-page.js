@@ -1,4 +1,4 @@
-// Banco de palavras validado na proposta
+
 const palavras = [
     "Prevenção", "Cuidado", "Vida", "Amor", "Apoio", "Família", "Esperança",
     "Mamografia", "Consciência", "Saúde", "Outubro Rosa", "Laço Rosa",
@@ -18,8 +18,6 @@ const palavras = [
     "Vínculo", "Prosperar", "Sucesso"
 ];
 
-// Elementos da página
-// const palavraAtualEl = document.getElementById('palavra-atual'); // REMOVIDA
 const sortearBtn = document.getElementById('sortear-btn');
 const sortearNumeroBtn = document.getElementById('sortear-numero-btn');
 const historicoRecenteEl = document.getElementById('historico-recente');
@@ -27,11 +25,9 @@ const globoVisualEl = document.getElementById('globo-visual');
 const historicoWrapperPalavras = document.getElementById('historico-wrapper-palavras');
 const historicoWrapperNumeros = document.getElementById('historico-wrapper-numeros');
 
-// Variáveis de controle do jogo
 let palavrasDisponiveis = [...palavras];
 let historicoPalavras = [];
 
-// Função para atualizar o histórico na tela (as 3 últimas palavras)
 function atualizarHistorico() {
     const spans = historicoRecenteEl.getElementsByTagName('span');
     for (let i = 0; i < spans.length; i++) {
