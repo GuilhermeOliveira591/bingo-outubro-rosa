@@ -7,7 +7,15 @@ const palavras = [
     "Toque", "Mulher", "Empatia", "Luta", "Abraço", "Amizade", "Proteção", 
     "Atitude", "Confiança", "Fé", "Recomeço", "Sobrevivente", "Resiliência", 
     "Acolhimento", "Juntos", "Conhecimento", "Celebração", "Inspiração", 
-    "Movimento", "Viver", "Florescer"
+    "Movimento", "Viver", "Florescer", "Campanha","Conscientização", "Divulgação", 
+    "Participar", "Ajudar", "Doar", "Evento", "Palestra", "Caminhada", "Iluminação", 
+    "Rastreamento", "Comunicação", "Ensinar", "Aprender", "Carinho", "Afeto", 
+    "Companheirismo", "Humanização", "Escuta", "Generosidade", "Rede", "Amparo",
+    "Gentileza", "Compreensão", "Ouvir", "Partilha", "Causa","Otimismo", "Paciência",
+    "Determinação", "Motivação", "Beleza", "Autoestima", "Alegria", "Paz", "Futuro",
+    "Renascer", "Chance", "Vencedora", "Rosa", "Exemplo", "Sorriso", "Gratidão", "Riso", 
+    "Remissão", "Caminho", "Dignidade", "Luz", "Laços","Encontro","Aliança","Sintonia",
+    "Vínculo", "Prosperar","Sucesso"
 ];
 
 // Elementos da página
