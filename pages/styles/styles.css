@@ -156,7 +156,7 @@ button:hover {
     .cartela-titulo {
         text-align: center;
         font-weight: bold;
-        font-size: 10pt;
+        font-size: 12pt;
         margin: 0 0 0.2cm 0; /* Zera margens, exceto 2mm abaixo */
         flex-shrink: 0; /* Diz ao flexbox para não espremer o título */
     }
@@ -166,9 +166,9 @@ button:hover {
         display: inline-flex; /* Trata as cartelas como blocos em uma linha */
         flex-direction: column;
         vertical-align: top; /* Alinha as cartelas pelo topo */
-        width: 7.5cm;
-        margin: 0.5cm;
-        height: 10cm;
+        width: 8.2cm;
+        margin: 0.2cm;
+        height: 12.5cm;
         border: 1px solid #ccc;
         padding: 0.2cm;
         box-sizing: border-box;
@@ -189,7 +189,7 @@ button:hover {
         width: 20%;
         height: 20%;
         border: 1px solid #ddd;
-        font-size: 8pt;
+        font-size: 10pt;
         text-align: center;
         vertical-align: middle;
         box-sizing: border-box;
