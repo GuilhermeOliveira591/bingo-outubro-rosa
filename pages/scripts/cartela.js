@@ -58,7 +58,8 @@ function gerarCartelasEmMassa() {
         const cartelaDiv = document.createElement('div');
         cartelaDiv.className = 'cartela-impressao';
         
-        const tituloCartela = document.createElement('h4');
+        const tituloCartela = document.createElement('p');
+        tituloCartela.className = 'cartela-titulo';
         tituloCartela.textContent = `Cartela Nº ${i}`;
         
         const novaTabela = criarTabelaCartela();
